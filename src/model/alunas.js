@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const AlunasSchema = new mongoose.Schema({
     nome: { type: String },
-    dateOfBirth: { type: Number },
+    dateOfBirth: { type: String }, //type: Number
     nasceuEmSp: { type: String }, //type: Boolean
     livros: [{ titulo: String, leu: String }] //leu: Boolean
 });
