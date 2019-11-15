@@ -1,5 +1,6 @@
 const express = require("express")
 const mongoose = require("mongoose")
+const bodyParser = require("body-parser")
 const app = express()
 
 mongoose.connect("mongodb://localhost:27017/reprograma", {useNewUrlParser: true});
@@ -45,6 +46,7 @@ app.use(function(req, res, next) {
   next()
 })
 
+app.use(bodyParser.json());
 app.use("/", index)
 app.use("/alunas", alunas)
 app.use("/professoras", professoras)

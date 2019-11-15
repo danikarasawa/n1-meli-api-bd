@@ -7,6 +7,8 @@ const AlunasSchema = new mongoose.Schema({
     dateOfBirth: { type: String }, //type: Number
     nasceuEmSp: { type: String }, //type: Boolean
     livros: [{ titulo: String, leu: String }] //leu: Boolean
+}, {
+    versionKey: false
 });
 //schema de alunas
 //representação das características do objeto aluna, que será utilizado no model
